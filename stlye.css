@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: #1f2937;
+
+  color: #f9faf8;
+  font-family: "Merriweather", serif;
+}
+
+.right-link {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #f9faf8;
+}
+
+a:hover {
+  color: #3882f6;
+}
+
+/* a:visited,
+a:link {
+} */
+
+ul {
+  list-style-type: none;
+}
+/* FONTS :
+
+font-family: 'Inconsolata', monospace;
+font-family: 'Merriweather', serif;
+font-family: 'Raleway', sans-serif;
+
+*/
