@@ -1,8 +1,10 @@
 "use strict";
 
 // SELECT elements
-const closeModal = document.querySelectorAll(".btn-close");
-console.log(closeModal);
+const closeModalPage = document.getElementById("page-close");
+const closeModalChapter = document.getElementById("chapter-close");
+const closeModalBook = document.getElementById("book-close");
+console.log(closeModalPage);
 // img
 const pageImg = document.querySelector(".img-item-1");
 const chapterImg = document.querySelector(".img-item-2");
@@ -42,4 +44,21 @@ chapterImg.addEventListener("click", function () {
 bookImg.addEventListener("click", function () {
   bookModal.classList.remove("hidden");
   overlay.classList.remove("hidden");
+});
+
+// closeModal
+
+closeModalPage.addEventListener("click", function () {
+  pageModal.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+closeModalChapter.addEventListener("click", function () {
+  chapterModal.classList.add("hidden");
+  overlay.classList.add("hidden");
+});
+
+closeModalBook.addEventListener("click", function () {
+  bookModal.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
