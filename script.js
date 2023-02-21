@@ -18,47 +18,35 @@ const overlay = document.querySelector(".overlay");
 
 // functions:
 
-// function closeModalFunc() {
-//   closeModal.addEventListener("click", function () {
-//     pageModal.classList.add("hidden");
-//     chapterModal.classList.add("hidden");
-//     bookModal.classList.add("hidden");
+function togglePage() {
+  pageModal.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+}
+function toggleChapter() {
+  chapterModal.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+}
+function toggleBook() {
+  bookModal.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+}
 
-//     //seperate
-//     overlay.classList.add("hidden");
-//     overlay.classList.add("hidden");
-//     overlay.classList.add("hidden");
-//   });
-// }
+pageImg.addEventListener("click", togglePage);
 
-pageImg.addEventListener("click", function () {
-  pageModal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-});
+chapterImg.addEventListener("click", toggleChapter);
 
-chapterImg.addEventListener("click", function () {
-  chapterModal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-});
-
-bookImg.addEventListener("click", function () {
-  bookModal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-});
+bookImg.addEventListener("click", toggleBook);
 
 // closeModal
 
-closeModalPage.addEventListener("click", function () {
-  pageModal.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
+closeModalPage.addEventListener("click", togglePage);
 
-closeModalChapter.addEventListener("click", function () {
-  chapterModal.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
+closeModalChapter.addEventListener("click", toggleChapter);
 
-closeModalBook.addEventListener("click", function () {
-  bookModal.classList.add("hidden");
-  overlay.classList.add("hidden");
+closeModalBook.addEventListener("click", toggleBook);
+
+// ESC Event listener
+pageModal.addEventListener("keydown", (e) => {
+  console.log(e);
+  console.log("hi");
 });
