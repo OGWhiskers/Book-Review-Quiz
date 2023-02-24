@@ -25,6 +25,15 @@ const bookModal = document.getElementById("book");
 const overlay = document.querySelector(".overlay");
 
 // functions:
+function closeModal() {
+  if (!pageModal.classList.contains("hidden")) {
+    togglePage();
+  } else if (!bookModal.classList.contains("hidden")) {
+    toggleBook();
+  } else if (!chapterModal.classList.contains("hidden")) {
+    toggleChapter();
+  }
+}
 
 function togglePage() {
   pageModal.classList.toggle("hidden");
@@ -55,8 +64,6 @@ closeModalBook.addEventListener("click", toggleBook);
 
 // click-overlay listener
 
-console.log(overlay);
-
 overlay.addEventListener("click", function () {
   if (!pageModal.classList.contains("hidden")) {
     togglePage();
@@ -66,3 +73,9 @@ overlay.addEventListener("click", function () {
 });
 
 // ESC Event listener
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
