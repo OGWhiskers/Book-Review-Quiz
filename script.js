@@ -2,11 +2,12 @@
 
 // SELECT elements
 
+// const closeBtn = document.querySelectorAll(".btn-close");
 const closeModalPage = document.getElementById("page-close");
 const closeModalChapter = document.getElementById("chapter-close");
 const closeModalBook = document.getElementById("book-close");
 const startLink = document.getElementById("start-link");
-console.log(closeModalPage);
+// console.log(closeModalPage);
 
 // img
 
@@ -56,6 +57,8 @@ bookImg.addEventListener("click", toggleBook);
 
 // closeModal
 
+// closeBtn.addEventListener("click", closeModal);
+
 closeModalPage.addEventListener("click", togglePage);
 
 closeModalChapter.addEventListener("click", toggleChapter);
@@ -64,13 +67,7 @@ closeModalBook.addEventListener("click", toggleBook);
 
 // click-overlay listener
 
-overlay.addEventListener("click", function () {
-  if (!pageModal.classList.contains("hidden")) {
-    togglePage();
-  } else if (!bookModal.classList.contains("hidden")) {
-    toggleBook();
-  } else if (!chapterModal.classList.contains("hidden")) toggleChapter();
-});
+overlay.addEventListener("click", closeModal);
 
 // ESC Event listener
 
