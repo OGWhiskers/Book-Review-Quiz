@@ -2,10 +2,12 @@
 
 // SELECT elements
 
-// const closeBtn = document.querySelectorAll(".btn-close");
-const closeModalPage = document.getElementById("page-close");
-const closeModalChapter = document.getElementById("chapter-close");
-const closeModalBook = document.getElementById("book-close");
+//Select NodeLists:
+// LEARN HOW TO LOOP THROUGH NODELIST!!!!!!!!!!
+const closeBtn = document.querySelectorAll(".btn-close");
+const homeBtn = document.querySelectorAll(".btn-page-1");
+// const StartBtn = document.querySelectorAll(".btn-page");
+
 const startLink = document.getElementById("start-link");
 // console.log(closeModalPage);
 
@@ -57,13 +59,9 @@ bookImg.addEventListener("click", toggleBook);
 
 // closeModal
 
-// closeBtn.addEventListener("click", closeModal);
-
-closeModalPage.addEventListener("click", togglePage);
-
-closeModalChapter.addEventListener("click", toggleChapter);
-
-closeModalBook.addEventListener("click", toggleBook);
+for (let i = 0; i < closeBtn.length; i++) {
+  closeBtn[i].addEventListener("click", closeModal);
+}
 
 // click-overlay listener
 
@@ -76,3 +74,9 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+// Home button functionality:
+
+for (let i = 0; i < homeBtn.length; i++) {
+  homeBtn[i].addEventListener("click", closeModal);
+}
