@@ -24,6 +24,11 @@ const bookModal = document.getElementById("book");
 
 const overlay = document.querySelector(".overlay");
 
+// Nav bar
+
+const nav = document.querySelector(".head");
+const sticky = nav.offsetTop;
+
 // functions:
 function closeModal() {
   if (!pageModal.classList.contains("hidden")) {
@@ -86,3 +91,11 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+// Navbar
+
+window.onscroll = () => {
+  window.pageYOffset >= sticky
+    ? nav.classList.add("sticky")
+    : nav.classList.remove("sticky");
+};

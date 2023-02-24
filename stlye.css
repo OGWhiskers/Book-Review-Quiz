@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  margin-bottom: 1000px;
 }
 
 .head {
@@ -40,6 +41,7 @@ ul {
 #information {
   padding-top: 70px;
   margin: 0px 0px 60px;
+  margin-top: 30px;
   /* font-family: "Roboto Condensed", sans-serif; */
 }
 .img {
@@ -156,6 +158,20 @@ ul {
   color: white;
   background-color: #3882f6;
 }
+
+/* .content {
+  padding: 16px;
+} */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* 
+.sticky,
+.content {
+  padding-to;
+} */
 /* FONTS :
 
 font-family: 'Inconsolata', monospace;
