@@ -99,3 +99,5 @@ window.onscroll = () => {
     ? nav.classList.add("sticky")
     : nav.classList.remove("sticky");
 };
+
+// Add pages and fix bug with the modal appearance.
