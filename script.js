@@ -3,53 +3,43 @@
 // SELECT elements
 
 //Select NodeLists:
-
 const closeBtn = document.querySelectorAll(".btn-close");
 const homeBtn = document.querySelectorAll(".btn-page-1");
-const StartBtn = document.querySelectorAll(".btn-page");
 
+const StartBtn = document.querySelectorAll(".btn-page");
 const startLink = document.getElementById("start-link");
 
 // img
-
 const modalImgs = document.querySelectorAll(".img-item-main");
-// const modalImgsM = document.querySelectorAll(".img-item");
 
 // modal
-
 const pageModal = document.getElementById("page");
 const chapterModal = document.getElementById("chapter");
 const bookModal = document.getElementById("book");
 
 // overlay
-
 const overlay = document.querySelector(".overlay");
 
 // Nav bar
-
 const nav = document.querySelector(".head");
 const sticky = nav.offsetTop;
 
 // functions:
+const doNothing = () => {
+  console.log(`nothing`);
+};
+
 function closeModal() {
-  if (!pageModal.classList.contains("hidden")) {
-    togglePage();
-  } else if (!bookModal.classList.contains("hidden")) {
-    toggleBook();
-  } else if (!chapterModal.classList.contains("hidden")) {
-    toggleChapter();
-  }
+  !pageModal.classList.contains("hidden")
+    ? togglePage()
+    : !bookModal.classList.contains("hidden")
+    ? toggleBook()
+    : !chapterModal.classList.contains("hidden")
+    ? toggleChapter()
+    : doNothing();
 }
 
-function openModal() {
-  if (bookModal.classList.contains("hidden")) {
-    toggleBook();
-  } else if (pageModal.classList.contains("hidden")) {
-    togglePage();
-  } else if (chapterModal.classList.contains("hidden")) {
-    toggleChapter();
-  }
-}
+function openModal() {}
 
 function togglePage() {
   pageModal.classList.toggle("hidden");
@@ -69,32 +59,22 @@ for (let i = 0; i < modalImgs.length; i++) {
   modalImgs[i].addEventListener("click", openModal);
 }
 
-// for (let i = 0; i < modalImgsM.length; i++) {
-//   modalImgsM[i].addEventListener("click", openModal);
-// }
-
 // closeModal
-
 for (let i = 0; i < closeBtn.length; i++) {
   closeBtn[i].addEventListener("click", closeModal);
 }
 
 // Home button functionality:
-
 for (let i = 0; i < homeBtn.length; i++) {
   homeBtn[i].addEventListener("click", closeModal);
 }
 
 // click-overlay listener
-
 overlay.addEventListener("click", closeModal);
 
 // ESC Event listener
-
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    closeModal();
-  }
+  e.key === "Escape" ? closeModal() : doNothing();
 });
 
 // Navbar
