@@ -13,6 +13,7 @@ const startLink = document.getElementById("start-link");
 // img
 
 const modalImgs = document.querySelectorAll(".img-item-main");
+// const modalImgsM = document.querySelectorAll(".img-item");
 
 // modal
 
@@ -41,10 +42,10 @@ function closeModal() {
 }
 
 function openModal() {
-  if (pageModal.classList.contains("hidden")) {
-    togglePage();
-  } else if (bookModal.classList.contains("hidden")) {
+  if (bookModal.classList.contains("hidden")) {
     toggleBook();
+  } else if (pageModal.classList.contains("hidden")) {
+    togglePage();
   } else if (chapterModal.classList.contains("hidden")) {
     toggleChapter();
   }
@@ -67,6 +68,10 @@ function toggleBook() {
 for (let i = 0; i < modalImgs.length; i++) {
   modalImgs[i].addEventListener("click", openModal);
 }
+
+// for (let i = 0; i < modalImgsM.length; i++) {
+//   modalImgsM[i].addEventListener("click", openModal);
+// }
 
 // closeModal
 
