@@ -39,7 +39,18 @@ function closeModal() {
     : doNothing();
 }
 
-function openModal() {}
+function openModal() {
+  modalImgs[0].addEventListener("click", function () {
+    togglePage();
+  });
+  modalImgs[1].addEventListener("click", function () {
+    toggleChapter();
+  });
+  modalImgs[2].addEventListener("click", function () {
+    toggleBook();
+  });
+}
+openModal();
 
 function togglePage() {
   pageModal.classList.toggle("hidden");
@@ -52,11 +63,6 @@ function toggleChapter() {
 function toggleBook() {
   bookModal.classList.toggle("hidden");
   overlay.classList.toggle("hidden");
-}
-
-// Img openModal
-for (let i = 0; i < modalImgs.length; i++) {
-  modalImgs[i].addEventListener("click", openModal);
 }
 
 // closeModal
@@ -84,5 +90,3 @@ window.onscroll = () => {
     ? nav.classList.add("sticky")
     : nav.classList.remove("sticky");
 };
-
-// Add pages and fix bug with the modal appearance.
