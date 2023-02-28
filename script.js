@@ -52,6 +52,16 @@ function openModal() {
 }
 openModal();
 
+function pageLink() {
+  location.href = "/pages/page.html";
+}
+function chapterLink() {
+  location.href = "/pages/chapter.html";
+}
+function bookLink() {
+  location.href = "/pages/book.html";
+}
+
 function togglePage() {
   pageModal.classList.toggle("hidden");
   overlay.classList.toggle("hidden");
