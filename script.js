@@ -100,3 +100,56 @@ window.onscroll = () => {
     ? nav.classList.add("sticky")
     : nav.classList.remove("sticky");
 };
+
+// QUESTIONS FOR BOOK PAGE:
+
+const one = new Map([
+  ["question", "What do you already know from reading the title?"],
+  [1, "You Know"],
+  [2, "write"],
+  [3, "answer"],
+  [4, "false"],
+  ["correct", "answer"],
+  [true, `Very thought answer. You are write`],
+  [false, `Sorry wrong choice. Try think a little longer`],
+]);
+const two = new Map([
+  ["question", "What do you already know from reading the title?"],
+  [1, "You Know"],
+  [2, "write"],
+  [3, "answer"],
+  [4, "false"],
+  ["correct", "answer"],
+  [true, `Very thought answer. You are write`],
+  [false, `Sorry wrong choice. Try think a little longer`],
+]);
+const three = new Map([
+  ["question", "What do you already know from reading the title?"],
+  [1, "You Know"],
+  [2, "write"],
+  [3, "answer"],
+  [4, "false"],
+  ["correct", "answer"],
+  [true, `Very thought answer. You are write`],
+  [false, `Sorry wrong choice. Try think a little longer`],
+]);
+const four = new Map([
+  ["question", "What do you already know from reading the title?"],
+  [1, "You Know"],
+  [2, "write"],
+  [3, "answer"],
+  [4, "false"],
+  ["correct", "answer"],
+  [true, `Very thought answer. You are write`],
+  [false, `Sorry wrong choice. Try think a little longer`],
+]);
+const five = new Map([
+  ["question", "What do you already know from reading the title?"],
+  [1, "You Know"],
+  [2, "write"],
+  [3, "answer"],
+  [4, "false"],
+  ["correct", "answer"],
+  [true, `Very thought answer. You are write`],
+  [false, `Sorry wrong choice. Try think a little longer`],
+]);
